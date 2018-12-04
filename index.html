@@ -3,13 +3,84 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+	<!-- подключение адаптива для устройств  -->
 	<title>Adaptive</title>
 	<link href="style.css" rel="stylesheet">
+	<link href="menu-origin.css" rel="stylesheet">
+	<link href="menu-self.css" rel="stylesheet">
+	<link href="menu-3.css" rel="stylesheet">
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.js "></script>
+
 </head>
 <body>
 	<header>
-		<menu>
-		</menu>
+
+		<!-- пример оригинал-->
+<script type="text/javascript">(function($){
+  $(function() {
+    $('.menu__icon').on('click', function() {
+      $(this).closest('.menu').toggleClass('menu_state_open');
+    });
+  });
+})(jQuery);
+</script>
+
+		<div class="menu">
+	    <div class="menu__icon">
+	      <span></span>
+	      <span></span>
+	      <span></span>
+	      <span></span>
+	    </div>  
+	    <div class="menu__links">
+	        <a class="menu__links-item">Item 1</a>
+	        <a class="menu__links-item">Item 2</a>
+	    </div>
+		</div>
+
+		<!--пример свой-->
+		<script type="text/javascript">(function($){
+  $(function() {
+    $('.nav__icon').on('click', function() {
+      $(this).closest('.nav').toggleClass('nav_state_open');
+    });
+  });
+})(jQuery);
+</script>
+		<div class="nav">
+			<div class="nav__icon">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="nav__links">
+				<a class="nav__links-item">Item 1</a>
+	      <a class="nav__links-item">Item 2</a>
+	      <a class="nav__links-item">Item 3</a>
+	      <a class="nav__links-item">Item 4</a>
+	    </div>
+	   </div>
+
+<!--пример 3-->
+			 <div class="wrapper">
+        <input type="checkbox" id="check-menu">
+        <label for="check-menu">Меню</label>
+        <div class="burger-line first"></div>
+        <div class="burger-line second"></div>
+        <div class="burger-line third"></div>
+        <div class="burger-line fourth"></div>
+        <nav class="main-menu">
+            <a class="main-menu__a" href="#">Item 1</a>
+            <a class="main-menu__a" href="#">Item 2</a>
+            <a class="main-menu__a"  href="#">Item 3</a>
+            <a class="main-menu__a" href="#">Item 4</a>
+            <a class="main-menu__a" href="#">Item 5</a>
+        </nav>
+    </div>
+
+
 	</header>
 	<main>
 		<p class="text oldfone">min 320 px</p>
@@ -18,5 +89,6 @@
 		<p class="text ipad">min 1024 px</p>
 		<p class="text descktop">min 1280 px</p>
 	</main>
+	
 </body>
 </html>
